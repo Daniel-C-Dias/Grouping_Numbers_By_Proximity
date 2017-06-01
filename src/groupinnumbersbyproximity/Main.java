@@ -66,7 +66,7 @@ group([16, 15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 2
 [ 45, 45, 45 ],
 
 [ 67, 67, 67 ] ]
-*/
+ */
 package groupinnumbersbyproximity;
 
 import java.util.ArrayList;
@@ -82,19 +82,48 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       /*
+
+        /*
        List<Integer> group1 = new ArrayList();
        List<Integer> group2 = new ArrayList();
        List<Integer> group3 = new ArrayList();
-       */
-       
-       int n = 3;
-       int group1[] = {16,15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 23, 12, 34, 45, 23, 67, 23, 67};
-       int group2[] = {16, 15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 23, 12, 34, 45, 23, 67, 23, 670};
-       
-       
+         */
+        int n1 = 3;
+        int n2 = 4;
+        int n3 = 5;
+        int group1[] = {16, 15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 23, 12, 34, 45, 23, 67, 23, 67};
+        int group2[] = {16, 15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 23, 12, 34, 45, 23, 67, 23, 670};
+        int group3[] = {160, 15, 14, 13, 34, 23, 24, 25, 26, 28, 45, 34, 23, 29, 12, 23, 45, 67, 23, 12, 34, 45, 23, 67, 23, 670};
         
+        System.out.println(getSum(group1));
+        
+    }
+    
+    public static int groupUp(int[] array, int n) {
+        return 0;
+    }
+    
+    public static int getHighest(int[] array) {
+        int highest = 0;
+        
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                highest = array[i];
+            } else {
+                highest = array[i + 1];
+            }
+        }
+        
+        return highest;
+    }
+    
+    public static int getSum(int[] array) {
+        int sum = 0;
+        
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
     
 }
