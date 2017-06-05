@@ -1,4 +1,4 @@
- // A class to represent a graph edge
+ // A class to represent an edge
 package groupinnumbersbyproximity;
 
 /**
